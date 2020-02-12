@@ -1,7 +1,5 @@
 FROM ubuntu:19.04
 
-MAINTAINER Christopher Smith <christopher@onecodex.com>
-
 ENV TERM=xterm
 
 WORKDIR /home/unicycler/
@@ -36,12 +34,12 @@ RUN localedef -i en_US -f UTF-8 en_US.UTF-8 \
 
 # Install SPAdes
 
-RUN wget --quiet "https://github.com/ablab/spades/releases/download/v3.13.1/SPAdes-3.13.1-Linux.tar.gz" \
-  && tar -zxf SPAdes-3.13.1-Linux.tar.gz \
-  && ls SPAdes-3.13.1-Linux \
-  && mv SPAdes-3.13.1-Linux/bin/* /usr/local/bin/ \
-  && mv SPAdes-3.13.1-Linux/share/* /usr/local/share/ \
-  && rm -rf SPAdes-3.13.1-Linux/
+RUN wget --quiet "https://github.com/ablab/spades/releases/download/v3.13.0/SPAdes-3.13.0-Linux.tar.gz" \
+  && tar -zxf SPAdes-3.13.0-Linux.tar.gz \
+  && ls SPAdes-3.13.0-Linux \
+  && mv SPAdes-3.13.0-Linux/bin/* /usr/local/bin/ \
+  && mv SPAdes-3.13.0-Linux/share/* /usr/local/share/ \
+  && rm -rf SPAdes-3.13.0-Linux/
 
 # Install samtools
 
